@@ -1,0 +1,30 @@
+<!--Heading Part-->
+<div class="container">
+  <div class="title">
+    <h2>Project Cost Calculation</h2>
+  </div>
+  <div class="button-group">
+    <button (click)="selectOption(option)" [ngClass]="{ 'selected': option === selectedOption }" *ngFor="let option of options">{{ option }}</button>
+  </div>
+  <div class="cost-calculation">
+    <h3>Cost Calculation: {{total}}</h3>
+    <p>Project Manager: 300</p>
+    <p>Developer: 1000</p>
+    <p>QA: 500</p>
+  </div>
+</div>
+
+<hr class="horizontal-line">
+
+<ul class="list">
+  <ng-container *ngFor="let selected of list">
+    <li class="dropdown" *ngFor="let employee of selected" [ngClass]="{'selected': employee.status === true}">
+      {{employee.type}}
+      <ul class="dropdown-menu" *ngIf="employee.type === '+PM' ">
+        <div class="button-group">
+          <button (click)="selectOption(option)" [ngClass]="{ 'selected': option === selectedOption }" *ngFor="let option of options">{{ option }}</button>
+        </div>
+      </ul>
+    </li>
+  </ng-container>
+</ul>

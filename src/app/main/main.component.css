@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title,
+.button-group,
+.cost-calculation {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.title {
+  /*background-color: #f2f2f2;*/
+}
+
+.title h2 {
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cost-calculation {
+  /*background-color: #f2f2f2;*/
+}
+
+.cost-calculation h3 {
+  margin: 0;
+}
+.horizontal-line {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+
+/* dropdown */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.list li{
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  width: 100px;
+}
+
+.list li:hover{
+  background-color: dimgray;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  list-style: none;
+  top: 0;
+  left: 100%;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.selected{
+  background-color: dimgray;
+  color: white;
+}
